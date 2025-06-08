@@ -10,6 +10,7 @@ All packages in this repository are compiled and optimized for LoongArch64.
 | ------------------------- | --------------------------------------------------- | ---------------------------------------------- |
 | gh                        | `sudo apt install gh`                               | GitHub's official command line tool            |
 | latx                      | `sudo apt install latx-i386 latx-amd64 latx-common` | Loongson Architecture Translator for x86       |
+| box64                     | `sudo apt install box64`                            | Linux Userspace x86_64 Emulator with a twist.  |
 | containerd.io             | `sudo apt install containerd.io`                    | An open and reliable container runtime         |
 | docker-buildx-plugin      | `sudo apt install docker-buildx-plugin`             | Docker Buildx CLI plugin                       |
 | docker-ce                 | `sudo apt install docker-ce`                        | Docker Engine                                  |
