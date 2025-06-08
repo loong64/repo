@@ -12,8 +12,6 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: reprepro
 
       - name: Import GPG key
         id: import_gpg
