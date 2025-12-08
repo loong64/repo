@@ -76,6 +76,7 @@ jobs:
             echo "Failed to get docker-ce version"
             exit 1
           fi
+          version=${version#*-}
           if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: docker-ce$" | grep -q "${version/v/}"; then
             gh release download ${version} -p '*.deb' --dir dist --repo loong64/docker-ce-packaging || exit 0
             echo "push=true" >> $GITHUB_ENV
