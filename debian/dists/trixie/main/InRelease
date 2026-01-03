@@ -1,0 +1,48 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Sat, 03 Jan 2026 17:20:23 +0000
+MD5Sum:
+ 9d70f47f13e4d8d263b863c665eba4d2               38 Release
+ bd4dbad511c3f71fa41183d8345beb41            11686 binary-loong64/Packages
+ 2b29872ae3cbce3ed9284c3b6e8b071c             3806 binary-loong64/Packages.gz
+ 2d49152b8383e087f7bec1b0859d7e58              112 binary-loong64/Release
+ 96569a404fc43fa8dc0deb27f0bb9f60              111 source/Release
+ 7029066c27ac6f5ef18d660d5741979a               20 source/Sources.gz
+SHA1:
+ c82c08e60e3f2439db57548fc581380eb83a03fa               38 Release
+ 06be59fb416b58f34232b88ad7c0387d9adc817d            11686 binary-loong64/Packages
+ 11c6a9a98ee8cbfaf37243a1e9137146d05230de             3806 binary-loong64/Packages.gz
+ 9b91990702dbc37efa11606abdd0f4c8297e9611              112 binary-loong64/Release
+ 52770f71d0d3908758a662d29f5625fe497e497c              111 source/Release
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4               20 source/Sources.gz
+SHA256:
+ 6dc0fdaf3c50d0f94b1d11f25e25f046280f79c569352aa3e9d6eda17f1dc7e8               38 Release
+ e1250fcd273ff6aa2a71a520eeddba9776cea7fad2631b4810d620d2a17d99c5            11686 binary-loong64/Packages
+ d035a4679e754053258efff6eb9864892f3dbf9fc1fae5f26330d5617f9d6006             3806 binary-loong64/Packages.gz
+ 8ceefdd6176a7f1a7bf6f59d1d280a82773167a726420ad7f273e6cffbc35104              112 binary-loong64/Release
+ a229a0ed951cdbdc24f8497437c54c31aff6d08da169ccf585a70c528bc4713d              111 source/Release
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2               20 source/Sources.gz
+SHA512:
+ 4146cc186304c3c797217044a5a92e5a691ca2480d741f0367a1c6bcbd2c7e0d516cae1d6c0ebde335312968af67efdd239ccd46572ceea652d326ea1152f6cf               38 Release
+ 1b2cb88957e0a0731202f09f9d92b9d25fd562e04bf556324de18c5403bbf4c012b4f83f7346c64dd32ac0f9ebb29f4d16b110c8c10d033b02974f7a521ca957            11686 binary-loong64/Packages
+ 997694bee97b596939942f32ef1472f9b6e01cd91dd4920058bd455d0aee7ed6801ba4f29020f6afc185ed3dc1426719a040d38490391303bfd7dc4e2966b35e             3806 binary-loong64/Packages.gz
+ 743a544645cc4ea3ed216b49dae775af8ce3e6aed01b665e8173d39c0150d39b5b6447c7d43583efe549807492ee1d0af1ef52ac5bc90e675b1e65cc52b1d4fe              112 binary-loong64/Release
+ 8a6119cb2d30148a7606b59011026b93fa71412aca7f4d76cb42fd1f5d2d6580a46732df7622d4b6e98305be5bcc96ee65efe22db38c719100ae0c56311adfca              111 source/Release
+ 7e8e93f4a89ce7fae011403e14a1d53544c6e6f6b6010d61129dc27937806d2b03802610d7999eab33a4c36b0f9e001d9d76001b8354087634c1aa9c740c536f               20 source/Sources.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE+AboxHQWdQUIVOHjNheoc8BVl60FAmlZT9gACgkQNheoc8BV
+l610tQ/+M3Hn6vUEAWQ/aBWlZfeOJiG0ON6jTA6QcD0Ghdy7rpzSypqtL/7/NA5x
+JVcDJOiUBLHOcLBVUF+DAy9dPG8zC7UZNrFAvWhLi4vo814NC36fdMbF0Km4r23a
+dj4IiG9ZoJx+dgn+KHpkJV0KUZTar2oTd7/L6LwDmT9nX2V2MsPrbpXMx9q+OIZS
+lTOYcXSUp5q3VkbxByV/Z4NS3Ojygpsyjxzix8VmbY9Kq8gUyiknR8MsiYui2OLg
+j98w9EV/7OK15xBxjh6hUPoNfB0IgWZwAC+e/73QoF9aRnFSvx1Ii+YXPIV1CboZ
++WcXi6xysVRzCDEWHIfjW2mmGWR/rW9ndHXjWX6QzkZOGOD5mbH+qDHPrFU5wzAF
+kckwQG8pXHcsvuYZFBgeu0IQ7LUvTJ9Q87vmVAiLl0egxDxxCh6IARcYCs3Y7WcB
+2RMa9evr9isqr/dba50kmI4J/hzhgV2FowLeulG3eukZa0bFGxioKGHbZqnMm7DP
+lbuWpRs4PN/7xgiVsszKrucUcxbuBgKAvjO2/0wIQ4Afo3JOYGDE0s9sMjwRUtPY
+WpCf6f1yiqy3trA8X1JWv/sTYbbmDClTL6t6+7+Pr1zGyFeiNlQVEIZnr/N9oihV
+Kxb7GyLdOJQUK7ZlrgXYpVLj056pK+pnM+dGID0foDsU8azEITk=
+=wrLA
+-----END PGP SIGNATURE-----
