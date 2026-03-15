@@ -1,0 +1,29 @@
+Origin: Debian
+Label: Debian
+Suite: stable
+Codename: trixie
+Date: Fri, 13 Mar 2026 17:37:41 UTC
+Architectures: loong64
+Components: main
+Description: Debian Released
+MD5Sum:
+ b84076553c6d02540b8a421439e8ce31 11686 main/binary-loong64/Packages
+ 6a92f98c60890061e2ae986d883fc8b0 3812 main/binary-loong64/Packages.gz
+ 2d49152b8383e087f7bec1b0859d7e58 112 main/binary-loong64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
+ 96569a404fc43fa8dc0deb27f0bb9f60 111 main/source/Release
+SHA1:
+ 7e0fcb1f9d0dbb44cf67eebd36976c703e4ad655 11686 main/binary-loong64/Packages
+ 32e545781a97004f7296141e2c848d493b9bb8c0 3812 main/binary-loong64/Packages.gz
+ 9b91990702dbc37efa11606abdd0f4c8297e9611 112 main/binary-loong64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
+ 52770f71d0d3908758a662d29f5625fe497e497c 111 main/source/Release
+SHA256:
+ 269d6633d35eed40b3bd879aaee4cbd341ecfab79863254bacce71af28b662e8 11686 main/binary-loong64/Packages
+ a66bcbba71142bc68cf87766222ca17adfe99b4f1d65ec05041827ccb3290146 3812 main/binary-loong64/Packages.gz
+ 8ceefdd6176a7f1a7bf6f59d1d280a82773167a726420ad7f273e6cffbc35104 112 main/binary-loong64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
+ a229a0ed951cdbdc24f8497437c54c31aff6d08da169ccf585a70c528bc4713d 111 main/source/Release
