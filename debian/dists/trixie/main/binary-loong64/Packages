@@ -1,0 +1,310 @@
+Package: box64
+Version: 0.4.0
+Architecture: loong64
+Maintainer: Ryan Fortner <ryankfortner@gmail.com>
+Installed-Size: 105455
+Depends: libc6 (>= 2.42)
+Multi-Arch: foreign
+Homepage: https://github.com/ptitSeb/box64
+Priority: optional
+Section: utils
+Filename: pool/main/b/box64/box64_0.4.0_loong64.deb
+Size: 16563976
+SHA256: eb9b4fde89496bdbdb2a2a4bf51657851b0441acd7d3b36d430f8a04541502ea
+SHA1: 700a96f059acdd1abbd7252aee6fc9481c08ef23
+MD5sum: 2a5710e5978fabdf776a247c97e52ca4
+Description: Linux Userspace x86_64 Emulator with a twist, targeted at ARM Linux devices
+ Box86 lets you run x86_64 Linux programs (such as games) on non-x86 Linux systems, like ARM (host system needs to be 64bit little-endian).
+
+Package: containerd.io
+Version: 1.7.27-1
+Architecture: loong64
+Maintainer: Containerd team <help@containerd.io>
+Installed-Size: 99202
+Depends: libc6 (>= 2.41), libseccomp2 (>= 2.5.0)
+Conflicts: containerd, runc
+Replaces: containerd, runc
+Provides: containerd, runc
+Homepage: https://containerd.io
+Priority: optional
+Section: devel
+Filename: pool/main/c/containerd.io/containerd.io_1.7.27-1_loong64.deb
+Size: 22550392
+SHA256: d9e1f1c2f1e03115f92b9c19930f169e5cc43aa10fbcb4498757ef091c0c7a37
+SHA1: a7dfde0fadd747d1263da43235ad61db6829a13d
+MD5sum: 31a6623a98f92e8a76dd41e42392724c
+Description: An open and reliable container runtime
+
+Package: containerd.io-dbgsym
+Source: containerd.io
+Version: 1.7.27-1
+Auto-Built-Package: debug-symbols
+Architecture: loong64
+Maintainer: Containerd team <help@containerd.io>
+Installed-Size: 10031
+Depends: containerd.io (= 1.7.27-1)
+Priority: optional
+Section: debug
+Filename: pool/main/c/containerd.io/containerd.io-dbgsym_1.7.27-1_loong64.deb
+Size: 3196072
+SHA256: 93e50f203b775921430cac24ae8ffdb9613e1265676526d70eb32c49391de276
+SHA1: 78acf7a7a4c16b8a8234b0ec002e650956fe15ec
+MD5sum: a327f782b6490847e7b5898abfb2456b
+Description: debug symbols for containerd.io
+Build-Ids: b269025909f9aa7bd457a6ff55111dc315c50fb6
+
+Package: docker-buildx-plugin
+Source: docker-ce (5:29.4.0-1~debian.13~trixie)
+Version: 0.32.1-1~debian.13~trixie
+Architecture: loong64
+Maintainer: Docker <support@docker.com>
+Installed-Size: 100922
+Enhances: docker-ce-cli
+Replaces: docker-ce-cli
+Homepage: https://github.com/docker/buildx
+Priority: optional
+Section: admin
+Filename: pool/main/d/docker-ce/docker-buildx-plugin_0.32.1-1~debian.13~trixie_loong64.deb
+Size: 18305916
+SHA256: f1e66c446497844e34292145dd66dd5bda342e9c4c15ed4fe88863ac029ddc2f
+SHA1: fb933ddbb6e70cbd24ad34f265d5954488ced1b6
+MD5sum: 1352ea182b37936b57032dbb3e11e23d
+Description: Docker Buildx cli plugin.
+ This plugin provides the 'docker buildx' subcommand.
+
+Package: docker-ce
+Version: 5:29.4.1-1~debian.13~trixie
+Architecture: loong64
+Maintainer: Docker <support@docker.com>
+Installed-Size: 102884
+Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: containerd.io (>= 1.7.27), docker-ce-cli, iptables, nftables, libc6 (>= 2.41), libnftables1 (>= 1.0.2), libsystemd0
+Recommends: apparmor, ca-certificates, docker-ce-rootless-extras, git, pigz, procps, xz-utils
+Suggests: cgroupfs-mount | cgroup-lite, kmod
+Conflicts: docker (<< 1.5~), docker-engine, docker.io
+Replaces: docker-ce-cli (<< 5:28.0.0), docker-engine
+Homepage: https://www.docker.com
+Priority: optional
+Section: admin
+Filename: pool/main/d/docker-ce/docker-ce_29.4.1-1~debian.13~trixie_loong64.deb
+Size: 20172652
+SHA256: 9a890def2f0f5605146aa49a0e950e9d01be821f67c8f9ac95df3bb11d8b4120
+SHA1: ce41639b3d95c66265b3765e0a9d946433405a05
+MD5sum: fa278ddca9b1166e60d3df03f39ae3b4
+Description: Docker: the open-source application container engine
+ Docker is a product for you to build, ship and run any application as a
+ lightweight container
+ .
+ Docker containers are both hardware-agnostic and platform-agnostic. This means
+ they can run anywhere, from your laptop to the largest cloud compute instance
+ and everything in between - and they don't require you to use a particular
+ language, framework or packaging system. That makes them great building blocks
+ for deploying and scaling web apps, databases, and backend services without
+ depending on a particular stack or provider.
+
+Package: docker-ce-cli
+Source: docker-ce
+Version: 5:29.4.1-1~debian.13~trixie
+Architecture: loong64
+Maintainer: Docker <support@docker.com>
+Installed-Size: 44279
+Depends: libc6 (>= 2.41)
+Recommends: docker-buildx-plugin, docker-compose-plugin
+Suggests: docker-model-plugin
+Conflicts: docker (<< 1.5~), docker-engine, docker.io
+Breaks: docker-ce (<< 5:0)
+Replaces: docker-ce (<< 5:0)
+Homepage: https://www.docker.com
+Priority: optional
+Section: admin
+Filename: pool/main/d/docker-ce/docker-ce-cli_29.4.1-1~debian.13~trixie_loong64.deb
+Size: 15706136
+SHA256: f6c57ab1913b8fec013897c1e8bc5fad3dd014b1d458e7b5cc0b1273ac13eb6e
+SHA1: 0b428b33abc7707ea5de658bfde45bb37b362e90
+MD5sum: 341287fe90f7171b836b2da76f3d230a
+Description: Docker CLI: the open-source application container engine
+ Docker is a product for you to build, ship and run any application as a
+ lightweight container
+ .
+ Docker containers are both hardware-agnostic and platform-agnostic. This means
+ they can run anywhere, from your laptop to the largest cloud compute instance
+ and everything in between - and they don't require you to use a particular
+ language, framework or packaging system. That makes them great building blocks
+ for deploying and scaling web apps, databases, and backend services without
+ depending on a particular stack or provider.
+
+Package: docker-ce-rootless-extras
+Source: docker-ce
+Version: 5:29.4.1-1~debian.13~trixie
+Architecture: loong64
+Maintainer: Docker <support@docker.com>
+Installed-Size: 14657
+Depends: dbus-user-session, libc6 (>= 2.41)
+Recommends: slirp4netns (>= 0.4.0) | passt
+Enhances: docker-ce
+Conflicts: rootlesskit
+Breaks: rootlesskit
+Replaces: rootlesskit
+Homepage: https://docs.docker.com/engine/security/rootless/
+Priority: optional
+Section: admin
+Filename: pool/main/d/docker-ce/docker-ce-rootless-extras_29.4.1-1~debian.13~trixie_loong64.deb
+Size: 5992584
+SHA256: e81c79d3ac734634c7c1d56ccd332955d837f360d1be824087debe1411eba262
+SHA1: e6febb18121b05396573cc80df02c12bacf51ff6
+MD5sum: a6981b92b5c1196a2d583664ce898676
+Description: Rootless support for Docker.
+ Use dockerd-rootless.sh to run the daemon.
+ Use dockerd-rootless-setuptool.sh to setup systemd for dockerd-rootless.sh.
+ This package contains RootlessKit, but does not contain VPNKit.
+ Either slirp4netns (>= 0.4.0), passt, or VPNKit needs to be installed separately.
+
+Package: docker-compose-plugin
+Source: docker-ce (5:29.4.1-1~debian.13~trixie)
+Version: 5.1.3-1~debian.13~trixie
+Architecture: loong64
+Maintainer: Docker <support@docker.com>
+Installed-Size: 31992
+Recommends: docker-buildx-plugin (>= 0.17.0)
+Enhances: docker-ce-cli
+Homepage: https://github.com/docker/compose
+Priority: optional
+Section: admin
+Filename: pool/main/d/docker-ce/docker-compose-plugin_5.1.3-1~debian.13~trixie_loong64.deb
+Size: 7217292
+SHA256: 6601fd64660370816917a3b898bbddecbd2ed6d15a23a753dbbdd61cf4dad6d8
+SHA1: ca142034dfa46c5ebc1dfcd8faf8090a521e30e4
+MD5sum: 6105a5c229cba5b4c4930781f28f26d8
+Description: Docker Compose (V2) plugin for the Docker CLI.
+ This plugin provides the 'docker compose' subcommand.
+ .
+ The binary can also be run standalone as a direct replacement for
+ Docker Compose V1 ('docker-compose').
+
+Package: docker-model-plugin
+Source: docker-ce (5:28.4.0-1~debian.13~trixie)
+Version: 0.1.39-1~debian.13~trixie
+Architecture: loong64
+Maintainer: Docker <support@docker.com>
+Installed-Size: 19147
+Enhances: docker-ce-cli
+Homepage: https://docs.docker.com/model-runner/
+Priority: optional
+Section: admin
+Filename: pool/main/d/docker-ce/docker-model-plugin_0.1.39-1~debian.13~trixie_loong64.deb
+Size: 4797076
+SHA256: e92b1f1467ac6cec00e7ada5ead0bb224a9c79dc89e73fd272ae2659cc5f70f6
+SHA1: 7ba90f83aac4bfa0af5ef8629501c5e3ba61ad78
+MD5sum: e3aa2713ffbf4b76d9eb15c364426408
+Description: Docker Model Runner plugin for the Docker CLI.
+ This plugin provides the 'docker model' subcommand.
+
+Package: gh
+Version: 2.92.0
+Architecture: loong64
+Maintainer: GitHub
+Installed-Size: 38509
+Depends: git
+Homepage: https://github.com/cli/cli
+Priority: optional
+Section: 
+Filename: pool/main/g/gh/gh_2.92.0_loong64.deb
+Size: 13626528
+SHA256: b37aa96245d025e763a063cb1ca44a38f5f8d38a2db154dd7cb98ea3e9a21d3d
+SHA1: 94cd73522652ba3775401873039f841dd1a700d4
+MD5sum: 2352fe53ed43a571c770d857e779de4e
+Description: GitHub’s official command line tool.
+
+Package: latx-amd64
+Source: lat
+Version: 1.6.5-1~debian.13~trixie
+Architecture: loong64
+Maintainer: loong64 <support@loong64.com>
+Installed-Size: 7273
+Depends: libc6 (>= 2.41), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.38.0), libssl3t64 (>= 3.0.0), latx-common
+Replaces: lat (<= 1.6.5-1~debian.13~trixie)
+Provides: lat (= 1.6.5-1~debian.13~trixie)
+Homepage: https://github.com/lat-opensource/lat
+Priority: optional
+Section: utils
+Filename: pool/main/l/lat/latx-amd64_1.6.5-1~debian.13~trixie_loong64.deb
+Size: 1397980
+SHA256: d0f3fa4bdb5ec6f068bcf3c41777975c2e4367f056f1b316d198d1c7f5cfad01
+SHA1: 88a907081fe663a13a957d162a0b58eef9b07222
+MD5sum: 7ef731406f108a8d12a98dcf1f68d2ff
+Description: LATX emulator for x86_64 binaries
+ This package provides the user-mode emulator for x86_64 binaries using LATX.
+
+Package: latx-amd64-dbgsym
+Source: lat
+Version: 1.6.5-1~debian.13~trixie
+Auto-Built-Package: debug-symbols
+Architecture: loong64
+Maintainer: loong64 <support@loong64.com>
+Installed-Size: 6768
+Depends: latx-amd64 (= 1.6.5-1~debian.13~trixie)
+Priority: optional
+Section: debug
+Filename: pool/main/l/lat/latx-amd64-dbgsym_1.6.5-1~debian.13~trixie_loong64.deb
+Size: 6147084
+SHA256: 2bc26335f8e31a36493ae0bc68c111e493c02eb6b5c29ec128276a311446ffe4
+SHA1: 7cf347995f4ad9d43f4f158d22c189bb70272851
+MD5sum: 78ad9d4d4742b5f114fba98e901aaa5d
+Description: debug symbols for latx-amd64
+Build-Ids: f14e810d2374ee96b8bf9058326329ad3d2eb2f9
+
+Package: latx-common
+Source: lat
+Version: 1.6.4-1~debian.13~trixie
+Architecture: all
+Maintainer: loong64 <support@loong64.com>
+Installed-Size: 11
+Homepage: https://github.com/lat-opensource/lat
+Priority: optional
+Section: utils
+Filename: pool/main/l/lat/latx-common_1.6.4-1~debian.13~trixie_all.deb
+Size: 1248
+SHA256: f80e2909f747224c6de1aec4383f75cd3fc8515c01b96522b43547fa30db5813
+SHA1: 74d67ff5c20eb7c96b670e5fae9bd886566e327d
+MD5sum: 0f62eb5e3acb6be0cb096fe1362fb976
+Description: Common files for LATX emulators
+ Shared configuration files for LATX emulator packages.
+
+Package: latx-i386
+Source: lat
+Version: 1.6.5-1~debian.13~trixie
+Architecture: loong64
+Maintainer: loong64 <support@loong64.com>
+Installed-Size: 5987
+Depends: libc6 (>= 2.41), libgcc-s1 (>= 3.0), libglib2.0-0t64 (>= 2.38.0), libssl3t64 (>= 3.0.0), latx-common
+Replaces: lat (<= 1.6.5-1~debian.13~trixie)
+Provides: lat (= 1.6.5-1~debian.13~trixie)
+Homepage: https://github.com/lat-opensource/lat
+Priority: optional
+Section: utils
+Filename: pool/main/l/lat/latx-i386_1.6.5-1~debian.13~trixie_loong64.deb
+Size: 1178360
+SHA256: c75cd96c327aaba62bf570c50d398d63a7cc4c36a3c6c17b5a64ab0bd935a749
+SHA1: c63e14d68f0807e32a16dabd0dc0cacc2e4ad6e0
+MD5sum: 1d39fc91077fd5922c86476b05f51020
+Description: LATX emulator for i386 binaries
+ This package provides the user-mode emulator for i386 binaries using LATX.
+
+Package: latx-i386-dbgsym
+Source: lat
+Version: 1.6.5-1~debian.13~trixie
+Auto-Built-Package: debug-symbols
+Architecture: loong64
+Maintainer: loong64 <support@loong64.com>
+Installed-Size: 6009
+Depends: latx-i386 (= 1.6.5-1~debian.13~trixie)
+Priority: optional
+Section: debug
+Filename: pool/main/l/lat/latx-i386-dbgsym_1.6.5-1~debian.13~trixie_loong64.deb
+Size: 5519704
+SHA256: 1004c9467ac4d93c811bab09a02faeebccbd9dc5ac9b6a46ca36398ee0b2c12b
+SHA1: 5312de6889b916bc6056aa4751b8414f203ae4a3
+MD5sum: 588edc24414b8ade9112c53b66659ac2
+Description: debug symbols for latx-i386
+Build-Ids: f1245644423dc76ee0a908afc4b4780af188e488
+
