@@ -1,0 +1,48 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Debian
+Label: Debian
+Suite: stable
+Codename: trixie
+Date: Fri, 04 Sep 2026 19:20:46 UTC
+Architectures: loong64
+Components: main
+Description: Debian Released
+MD5Sum:
+ 6019c38e51f61552a0e334ed5c689ad9 12239 main/binary-loong64/Packages
+ 3365a5194f10fde53a7d89ead92a404f 3954 main/binary-loong64/Packages.gz
+ 2d49152b8383e087f7bec1b0859d7e58 112 main/binary-loong64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
+ 96569a404fc43fa8dc0deb27f0bb9f60 111 main/source/Release
+SHA1:
+ 0f22ff0295abf100484003023a82e082df94ab7a 12239 main/binary-loong64/Packages
+ 71d009ebe0b08a6552c9a49b5b8acdbd43e51a1c 3954 main/binary-loong64/Packages.gz
+ 9b91990702dbc37efa11606abdd0f4c8297e9611 112 main/binary-loong64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
+ 52770f71d0d3908758a662d29f5625fe497e497c 111 main/source/Release
+SHA256:
+ 4a00e8ed18ba329d9a8471fb4a73f4f3688c08a76a0379504448ec77354f2356 12239 main/binary-loong64/Packages
+ 119db333e0eb42fe6950866288d0ad87a5a067934ed98b6b0d68ac81ffadd289 3954 main/binary-loong64/Packages.gz
+ 8ceefdd6176a7f1a7bf6f59d1d280a82773167a726420ad7f273e6cffbc35104 112 main/binary-loong64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
+ a229a0ed951cdbdc24f8497437c54c31aff6d08da169ccf585a70c528bc4713d 111 main/source/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE+AboxHQWdQUIVOHjNheoc8BVl60FAmqbGg8ACgkQNheoc8BV
+l63bhg//djPHZrIZwFMASncZxeKYm2mQRLfq2VDbqeGuYhLxNe50QcSK8cDo7aiq
+Rov+p4y4rxe4UJUgdSAU73N4Vmqwr55/qqUOHkLyGKIZHAFuoDbgGUhg4WLMBtAE
+zS9dzR+JgVJzniOGdJIUbIgNEkoeO7e1vRdgmcFk1sT60WqLpwopYbymtD9Hq3i7
+4+N4NfWWjJjQTCoyanO4FqVqCPYq8xIwfCpn0GUypf05CRqwdIUg8HyNAQuMhR7q
+RDx8fwDqjM8nncoeuG15d3dgKNxzFqzijrEfFXEd3q5ggZnM+bJcHuK+Nw8kcDke
+mNqh0xXXep/Q6pz8uIPqvq1NQCABY7eQCurhiyiWZdCP1zy59qPiJ48ge/Dm1BJn
+n3yqOJILXWvog7TPoL6GobGVDrBxGda+r7ZKYu22zzyx2wBNmIDJJXB8fUHrbRXP
+L0+UypM8Wix4atyCsbZ15QYFCDsyU9pUeyNeIhH8na3qZSxXX/Pl/8Ayh+b7EXy/
+HL87A9kNzWjuOgJKHaG5bFJfVr4D/hfZEUPc1L+sXHNcJ7bSc4RwV8/0AcXcmNdb
+j9aFNcYDLZ8l24rRGcOWlMVluT8HTTxFrkzDXK7ZNGjZ87LtZ2mwex0FtorJhmzt
+VQ5HJ+K7Bz5cYwmXjYwZmIMfxmbeAVfu5nBrwbhoRqwE9tRa2X4=
+=ycKl
+-----END PGP SIGNATURE-----
