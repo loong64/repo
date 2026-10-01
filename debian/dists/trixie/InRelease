@@ -1,0 +1,48 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: Debian
+Label: Debian
+Suite: stable
+Codename: trixie
+Date: Thu, 01 Oct 2026 21:39:29 UTC
+Architectures: loong64
+Components: main
+Description: Debian Released
+MD5Sum:
+ a0563d5ebfe8333bcad1873386e47d3e 12239 main/binary-loong64/Packages
+ d358497d64f22722bd427e211ebfcc0d 3953 main/binary-loong64/Packages.gz
+ 2d49152b8383e087f7bec1b0859d7e58 112 main/binary-loong64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
+ 96569a404fc43fa8dc0deb27f0bb9f60 111 main/source/Release
+SHA1:
+ 9ad58493dd9043ce5f033590d222acb984847c02 12239 main/binary-loong64/Packages
+ 8d8fca770d38e5ad3947ed81450aa8d537bc777d 3953 main/binary-loong64/Packages.gz
+ 9b91990702dbc37efa11606abdd0f4c8297e9611 112 main/binary-loong64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
+ 52770f71d0d3908758a662d29f5625fe497e497c 111 main/source/Release
+SHA256:
+ 749eb05970a2f405d746fd3e3c819b7102de42a778af050b3843eae1f45ea326 12239 main/binary-loong64/Packages
+ a92f7d0c442cd0a7adaba161000ed9412299037707b78bcdbd2acf5b6bf3afb5 3953 main/binary-loong64/Packages.gz
+ 8ceefdd6176a7f1a7bf6f59d1d280a82773167a726420ad7f273e6cffbc35104 112 main/binary-loong64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
+ a229a0ed951cdbdc24f8497437c54c31aff6d08da169ccf585a70c528bc4713d 111 main/source/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEE+AboxHQWdQUIVOHjNheoc8BVl60FAmq+0xIACgkQNheoc8BV
+l62FFg/+Jt5QdBfmCl8cDKY3H0g3KOJqU9VudpRGCQinhPYQtyn5RTfATS5h803/
+GeZsp4RpwT/Acs7+0h2Qw5dm626fXYGfOzeClLNs+ripMfTra0PgAtAYUdiLiQJ6
+6eGdzSPLGHjYzUL0BbxTRR+zFw12SJwdstEL99xvpgQT3cATRzF9dagxIRP/DPre
+MgxJDtn/qqsyEn1B0SEDXpWbqdgyS8qXn5qYoGl+Jyaa6wB9imy5FdKwUJDDeBzQ
+pY+Rm7qjYSBc6uANkmCk3ow5puxVSoCcizWJzVDseRUxez2UkycLe9z0Y5OqNTEY
+CMcU9WldG+VSYhbRD7X1iTt0D7He5Qfr5OYUAGqHf973+oqjVtr0QKnbwQBHCJYK
+EnILGBWpUwt1kx05LqBf/26KiOtQgsO3yq7cS/fbgKNGBJwPL6pGKxq1vk2o/FCJ
+bNAiX4ziR4EmVVvnUqLQPnXIJuQh4If+CgcFaKKo2O6Du6g9VxbsXkZVbgakn9U+
+vHLxwPD74yqAN4kqUMPYlfKspNsm2q0Qkdmv3FvVJxIOtY79AHqLlIeTUTmUddbq
+9g8SnNFOvL1XyIYCWTb8fXWmynk5oIOvcGbXKxmLjTxbTkUcsZ36e7giKPdsZyhD
+9862egVo5W+WZkmWn2PiqtUYb3HeKWJuCHb8Aan7nWhd/jguXis=
+=GN65
+-----END PGP SIGNATURE-----
