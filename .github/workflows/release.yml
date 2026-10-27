@@ -1,0 +1,117 @@
+name: Update Repository
+
+on:
+  schedule:
+     - cron: '0 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env: 
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v7
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+
+      - name: Prepare scripts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y reprepro gnupg-agent
+          mkdir -p dist debian/dists debian/pool ~/.gnupg
+
+          echo > ~/.gnupg/gpg-agent.conf <<EOF
+          max-cache-ttl 60480000
+          default-cache-ttl 60480000
+          allow-preset-passphrase
+          EOF
+          gpg-connect-agent reloadagent /bye
+
+          wget -qO - https://github.com/crazy-max/undock/releases/download/v0.14.0/undock_0.14.0_linux_amd64.tar.gz | sudo tar xz -C /usr/local/bin
+
+      - name: Check gh-cli packages
+        run: |
+          version=$(curl --retry 10 -s "https://api.github.com/repos/cli/cli/releases/latest" | jq -r ".tag_name")
+          if [ -z "$version" ] || [ "$version" == "null" ]; then
+            echo "Failed to get gh-cli version"
+            exit 1
+          fi
+          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: gh$" | grep -q "${version/v/}"; then
+            gh release download ${version} -p '*loong64.deb' --dir dist --repo loong64/cli || exit 0
+            echo "push=true" >> $GITHUB_ENV
+          fi
+
+      - name: Check linglong-store packages
+        run: |
+          version=$(curl --retry 10 -s "https://api.github.com/repos/HanHan666666/flutter-linglong-store/releases/latest" | jq -r ".tag_name")
+          if [ -z "$version" ] || [ "$version" == "null" ]; then
+            echo "Failed to get linglong-store version"
+            exit 1
+          fi
+          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: linglong-store$" | grep -q "${version/v/}"; then
+            gh release download ${version} -p '*loong64.deb' --dir dist --repo HanHan666666/flutter-linglong-store || exit 0
+            echo "push=true" >> $GITHUB_ENV
+          fi
+
+      - name: Check docker-ce packages
+        run: |
+          version=$(curl --retry 10 -s "https://api.github.com/repos/moby/moby/releases/latest" | jq -r ".tag_name")
+          if [ -z "$version" ] || [ "$version" == "null" ]; then
+            echo "Failed to get docker-ce version"
+            exit 1
+          fi
+          version=${version#*-}
+          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: docker-ce$" | grep -q "${version/v/}"; then
+            gh release download ${version} -p '*.deb' --dir dist --repo loong64/docker-ce-packaging || exit 0
+            echo "push=true" >> $GITHUB_ENV
+          fi
+
+      - name: Check containerd.io packages
+        run: |
+          version=$(curl --retry 10 -s https://api.github.com/repos/loong64/docker-packaging/tags | jq -r '[.[].name | select(contains("containerd/v2.2"))][0] | split("/")[-1] | split("-")[0]')
+          if [ -z "$version" ] || [ "$version" == "null" ]; then
+            echo "Failed to get containerd.io version"
+            exit 1
+          fi
+          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: containerd.io$" | grep -q "${version/v/}"; then
+            undock --platform=linux/loong64 --include=debian/trixie/loong64 --wrap --rm-dist --all ghcr.io/loong64/dockereng/packaging:containerd-${version} /tmp/containerd
+            mv /tmp/containerd/debian/trixie/loong64/*.deb dist/
+            echo "push=true" >> $GITHUB_ENV
+          fi
+
+      - name: Update repository
+        if: env.push == 'true'
+        run: |
+          KEYGRIP=$(gpg -K --with-keygrip | grep Keygrip | head -1 | awk '{print $3}')
+          /usr/lib/gnupg2/gpg-preset-passphrase --preset "$KEYGRIP" <<< "${{ secrets.PASSPHRASE }}"
+
+          # reprepro -Vb debian includedeb trixie dist/*.deb
+          for file in dist/*.deb; do
+            echo "Processing $file"
+            reprepro -Vb debian includedeb trixie $file || true
+          done
+
+          cd debian/dists/trixie/main
+          apt-ftparchive release . > Release
+          # gpg --clearsign -o InRelease Release
+          # gpg -abs -o Release.gpg Release
+          gpg --default-key "${{ steps.import_gpg.outputs.keyid }}" --batch --pinentry-mode="loopback" --passphrase="${{ secrets.PASSPHRASE }}" -abs -o - Release > Release.gpg
+          gpg --default-key "${{ steps.import_gpg.outputs.keyid }}" --batch --pinentry-mode="loopback" --passphrase="${{ secrets.PASSPHRASE }}" --clearsign -o - Release > InRelease
+
+      - name: Push changes
+        if: env.push == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan temp_branch
+          git add .
+          git commit -m "feat: Repository snapshot $(date +%Y-%m-%d)"
+          git branch -D master || true
+          git branch -m master
+          git push -f origin master
