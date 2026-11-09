@@ -11,11 +11,11 @@ jobs:
     env: 
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Import GPG key
         id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v6
+        uses: crazy-max/ghaction-import-gpg@v7
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -23,7 +23,7 @@ jobs:
       - name: Prepare scripts
         run: |
           sudo apt-get update
-          sudo apt-get install -y reprepro gnupg-agent
+          sudo apt-get install -y apt-utils reprepro gnupg-agent
           mkdir -p dist debian/dists debian/pool ~/.gnupg
 
           echo > ~/.gnupg/gpg-agent.conf <<EOF
@@ -33,33 +33,11 @@ jobs:
           EOF
           gpg-connect-agent reloadagent /bye
 
-      - name: check lat packages
-        run: |
-          version=$(curl -s "https://api.github.com/repos/loong64/lat/releases/latest" | jq -r ".tag_name")
-          if [ -z "$version" ] || [ "$version" == "null" ]; then
-            echo "Failed to get latx version"
-            exit 1
-          fi
-          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: latx$" | grep -q "${version/v/}"; then
-            gh release download ${version} -p '*.deb' --dir dist --repo loong64/lat || exit 0
-            echo "push=true" >> $GITHUB_ENV
-          fi
-
-      - name: check box64 packages
-        run: |
-          version=$(curl -s "https://api.github.com/repos/loong64/box64/releases/latest" | jq -r ".tag_name")
-          if [ -z "$version" ] || [ "$version" == "null" ]; then
-            echo "Failed to get box64 version"
-            exit 1
-          fi
-          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: box64$" | grep -q "${version/v/}"; then
-            gh release download ${version} -p '*loong64.deb' --dir dist --repo loong64/box64 || exit 0
-            echo "push=true" >> $GITHUB_ENV
-          fi
+          wget -qO - https://github.com/crazy-max/undock/releases/download/v0.14.0/undock_0.14.0_linux_amd64.tar.gz | sudo tar xz -C /usr/local/bin
 
       - name: Check gh-cli packages
         run: |
-          version=$(curl -s "https://api.github.com/repos/cli/cli/releases/latest" | jq -r ".tag_name")
+          version=$(curl --retry 10 -s "https://api.github.com/repos/cli/cli/releases/latest" | jq -r ".tag_name")
           if [ -z "$version" ] || [ "$version" == "null" ]; then
             echo "Failed to get gh-cli version"
             exit 1
@@ -69,9 +47,21 @@ jobs:
             echo "push=true" >> $GITHUB_ENV
           fi
 
+      - name: Check linglong-store packages
+        run: |
+          version=$(curl --retry 10 -s "https://api.github.com/repos/HanHan666666/flutter-linglong-store/releases/latest" | jq -r ".tag_name")
+          if [ -z "$version" ] || [ "$version" == "null" ]; then
+            echo "Failed to get linglong-store version"
+            exit 1
+          fi
+          if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: linglong-store$" | grep -q "${version/v/}"; then
+            gh release download ${version} -p '*loong64.deb' --dir dist --repo HanHan666666/flutter-linglong-store || exit 0
+            echo "push=true" >> $GITHUB_ENV
+          fi
+
       - name: Check docker-ce packages
         run: |
-          version=$(curl -s "https://api.github.com/repos/moby/moby/releases/latest" | jq -r ".tag_name")
+          version=$(curl --retry 10 -s "https://api.github.com/repos/moby/moby/releases/latest" | jq -r ".tag_name")
           if [ -z "$version" ] || [ "$version" == "null" ]; then
             echo "Failed to get docker-ce version"
             exit 1
@@ -84,13 +74,14 @@ jobs:
 
       - name: Check containerd.io packages
         run: |
-          version=v$(curl -sSL https://github.com/docker/containerd-packaging/raw/main/debian/changelog | head -n 1 | grep -oP '\(\K[^\)]+' | cut -d'-' -f1)
+          version=$(curl --retry 10 -s https://api.github.com/repos/loong64/docker-packaging/tags | jq -r '[.[].name | select(contains("containerd/v2.2"))][0] | split("/")[-1] | split("-")[0]')
           if [ -z "$version" ] || [ "$version" == "null" ]; then
             echo "Failed to get containerd.io version"
             exit 1
           fi
           if ! cat debian/dists/trixie/main/binary-loong64/Packages | grep -A1 "^Package: containerd.io$" | grep -q "${version/v/}"; then
-            gh release download ${version} -p '*.deb' --dir dist --repo loong64/containerd-packaging || exit 0
+            undock --platform=linux/loong64 --include=debian/trixie/loong64 --wrap --rm-dist --all ghcr.io/loong64/dockereng/packaging:containerd-${version} /tmp/containerd
+            mv /tmp/containerd/debian/trixie/loong64/*.deb dist/
             echo "push=true" >> $GITHUB_ENV
           fi
 
