@@ -74,7 +74,7 @@ jobs:
 
       - name: Check containerd.io packages
         run: |
-          version=$(curl --retry 10 -s https://api.github.com/repos/loong64/docker-packaging/tags | jq -r '[.[].name | select(contains("containerd/v2.2"))][0] | split("/")[-1] | split("-")[0]')
+          version=$(curl --retry 10 -s https://api.github.com/repos/loong64/docker-packaging/tags | jq -r '[.[].name | select(contains("containerd/v2.4"))][0] | split("/")[-1] | split("-")[0]')
           if [ -z "$version" ] || [ "$version" == "null" ]; then
             echo "Failed to get containerd.io version"
             exit 1
