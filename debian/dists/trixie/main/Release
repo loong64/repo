@@ -1,0 +1,29 @@
+Date: Fri, 27 Nov 2026 00:57:39 +0000
+MD5Sum:
+ ba1b6f69f2c8c1e0f643fbc19791b9fe               38 Release
+ b78f986183f9e08c3da88b0a43165b23            12244 binary-loong64/Packages
+ 1aaecb128ae727c252036d7da3bbc3ef             3956 binary-loong64/Packages.gz
+ 2d49152b8383e087f7bec1b0859d7e58              112 binary-loong64/Release
+ 96569a404fc43fa8dc0deb27f0bb9f60              111 source/Release
+ 7029066c27ac6f5ef18d660d5741979a               20 source/Sources.gz
+SHA1:
+ df49e6079b9ba286480894799f8dfd26db9cc81d               38 Release
+ faa03e4b059b7c182aa90cf6cf876dcb7b9979ae            12244 binary-loong64/Packages
+ 4d5014c5ee8a006d874e20fc996707846d3ef6a6             3956 binary-loong64/Packages.gz
+ 9b91990702dbc37efa11606abdd0f4c8297e9611              112 binary-loong64/Release
+ 52770f71d0d3908758a662d29f5625fe497e497c              111 source/Release
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4               20 source/Sources.gz
+SHA256:
+ 8d39b8f9ad5ea7f5a98927d3fd5b256e123f09cf5532188a67fb1afe49557c36               38 Release
+ 3747a32f1fcb55fb8fd340bf4175047ef3faf960155e64c340cda58e1ea65280            12244 binary-loong64/Packages
+ b2dc1468deaa5476708787f8122687b1a3ffeb084acb9bb83fbb3dee514d9ff1             3956 binary-loong64/Packages.gz
+ 8ceefdd6176a7f1a7bf6f59d1d280a82773167a726420ad7f273e6cffbc35104              112 binary-loong64/Release
+ a229a0ed951cdbdc24f8497437c54c31aff6d08da169ccf585a70c528bc4713d              111 source/Release
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2               20 source/Sources.gz
+SHA512:
+ f6a8af909f2bc8bf552b9bc685e2825b9b4f1967ceb14e3c843f8ba71c7e3634cd84d19828a4ab412af943daa2f3821041355de15629875f101d38cb996e9e05               38 Release
+ d3d9d9a6a2e2f7d4943b65487d4b5cf5e4a14cf3eb3fa00357133fd5ec281ff36ee405e4ae3351747fa1c325916fcbe6cd067ed7358f16d99b8256f7476aa2dc            12244 binary-loong64/Packages
+ e5d57096f2ee473abad73f2ac75d56bb6880d0796b51d44f27b40c5b87bc66331764254a4416666b1452ed62a7e3b067c668137f1bc597e9bf9472807235c929             3956 binary-loong64/Packages.gz
+ 743a544645cc4ea3ed216b49dae775af8ce3e6aed01b665e8173d39c0150d39b5b6447c7d43583efe549807492ee1d0af1ef52ac5bc90e675b1e65cc52b1d4fe              112 binary-loong64/Release
+ 8a6119cb2d30148a7606b59011026b93fa71412aca7f4d76cb42fd1f5d2d6580a46732df7622d4b6e98305be5bcc96ee65efe22db38c719100ae0c56311adfca              111 source/Release
+ 7e8e93f4a89ce7fae011403e14a1d53544c6e6f6b6010d61129dc27937806d2b03802610d7999eab33a4c36b0f9e001d9d76001b8354087634c1aa9c740c536f               20 source/Sources.gz
